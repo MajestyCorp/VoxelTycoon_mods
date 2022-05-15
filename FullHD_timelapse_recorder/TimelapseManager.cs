@@ -78,7 +78,7 @@ namespace TimelapseMod
                 AVoxelMod.ClearTrackedObject();
             } else
             {
-                result = (Vector3)GetRandomCity().Position;
+                result = (Vector3)WorldManager.Current.GetSurface(GetRandomCity().Position);
             }
 
             return result;

@@ -53,7 +53,7 @@ namespace TimelapseMod
 
         private void OnBuildingBuilt(Building building)
         {
-            if (building is VehicleStation || TrackedBuilding == null || !(TrackedBuilding is VehicleStation))
+            if (building is VehicleStation || TrackedBuilding == null || TrackedBuilding.Company == null)
                 TrackedBuilding = building;
         }
 

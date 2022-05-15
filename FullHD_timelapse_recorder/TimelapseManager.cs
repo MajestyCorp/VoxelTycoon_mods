@@ -110,7 +110,7 @@ namespace TimelapseMod
 
         private string GetFolder()
         {
-            string result = Application.dataPath + @"\Timelapse";
+            string result = Application.persistentDataPath + @"\Timelapse";
 
             //check Timelapse directory
             if (!Directory.Exists(result))

@@ -14,6 +14,7 @@ namespace TimelapseMod
     public class AVoxelMod : Mod
     {
         public const string ModeFolder = "timelapse_mod";
+        public const string ModeName = "FullHD Timelapse Recorder";
         private const string c_template_button = "Camera";
         private const string c_panel_name = "Fill";
         private const float c_button_step = 40f;
@@ -87,7 +88,7 @@ namespace TimelapseMod
 
             //set tooltip
             tooltip = buttonTimelapse.GetComponent<TooltipTarget>();
-            tooltip.Text = "Timelapse Recorder";
+            tooltip.Text = ModeName;
 
 
             //save default colors
@@ -115,7 +116,7 @@ namespace TimelapseMod
         {
             var priority = NotificationPriority.Critical;
             var color = Company.Current.Color;
-            var title = "FullHD Timelapse recorder:";
+            var title = ModeName + ":";
             var action = default(INotificationAction);
             var icon = FontIcon.FaSolid("\uf7e4");
             NotificationManager.Current.Push(priority, color, title, message, action, icon);

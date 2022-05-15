@@ -72,7 +72,7 @@ namespace TimelapseMod
         private Vector3 GetNewPosition()
         {
             Vector3 result;
-            if (AVoxelMod.TrackedBuilding != null)
+            if (AVoxelMod.TrackedBuilding != null && AVoxelMod.TrackedBuilding.Company == Company.Current)
             {
                 result = AVoxelMod.TrackedBuilding.transform.position;
                 AVoxelMod.ClearTrackedObject();

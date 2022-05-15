@@ -1,5 +1,5 @@
-# VoxelTycoon_mods
- Mods for Voxel Tycoon game
+# Voxel Tycoon Mods
+This is a repository containing source code for mods of the Voxel Tycoon game.
  
 
 > `Assembly-CSharp.dll`, `UnityEngine.ImageConversionModule.dll`, `UnityEngine.UI.dll` and `UnityEngine.CoreModule.dll` are not included in the repository. They can be found in the `<game_directory>/VoxelTycoon_Data/Managed` folder and should be manually put into the `Lib` folder before building projects.

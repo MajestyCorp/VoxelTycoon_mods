@@ -1,6 +1,11 @@
 ﻿{
   "Dependencies": null,
-  "Description": "Create your own awesome FullHD timelapses! Windows OS only",
+  "Description": "Create your own awesome FullHD timelapses!
+This mod uses FFMPEG utility to record hiqh quality videos.
+
+Place a building and start recording. Next ~50 minutes it will record 10 seconds of video. If you continue to record timelapse, it will choose your last constructed building in the last 50 minutes or it will choose a random city (if nothing was built).
+
+Windows OS only",
   "Hidden": false,
   "PublishedFileId": 2808400701,
   "Tags": [

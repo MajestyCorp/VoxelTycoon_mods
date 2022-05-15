@@ -11,7 +11,7 @@ namespace TimelapseMod
     {
         private const float c_camera_distance = 125f;
         private const float c_video_framerate = 30f;
-        private const float c_screenshot_delay = 0.5f;
+        private const float c_screenshot_delay = 10f;
         private const float c_video_session = 10f;
         private const float c_video_angle_speed = 5f;
         private const float c_vertical_camera_angle = 45f;
@@ -110,7 +110,7 @@ namespace TimelapseMod
 
         private string GetFolder()
         {
-            string result = Application.dataPath + @"/Timelapse";
+            string result = Application.dataPath + @"\Timelapse";
 
             //check Timelapse directory
             if (!Directory.Exists(result))

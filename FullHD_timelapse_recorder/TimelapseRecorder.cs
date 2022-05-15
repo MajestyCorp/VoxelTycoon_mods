@@ -171,9 +171,10 @@ namespace TimelapseMod
 
         private void RecordVideo()
         {
-            string ffmpeg_path = AppDomain.CurrentDomain.BaseDirectory + @"/Content/" + AVoxelMod.ModeFolder + @"/ffmpeg/bin/ffmpeg.exe";
-            string video_path = _folder + @"/Video_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".mp4";
-            string png_mask = _folder + @"/Screenshot_%04d" + GetFormat();
+            //string ffmpeg_path = AppDomain.CurrentDomain.BaseDirectory + @"/Content/" + AVoxelMod.ModeFolder + @"/ffmpeg/bin/ffmpeg.lib";
+            string ffmpeg_path = AppDomain.CurrentDomain.BaseDirectory + @"\..\..\workshop\content\732050\2808400701\ffmpeg\bin\ffmpeg.lib";
+            string video_path = _folder + @"\Video_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".mp4";
+            string png_mask = _folder + @"\Screenshot_%04d" + GetFormat();
 
             Process cmd = new Process();
             cmd.StartInfo.FileName = ffmpeg_path;
@@ -190,10 +191,16 @@ namespace TimelapseMod
             cmd.StandardInput.Close();
             cmd.WaitForExit();
 
-            if(File.Exists(video_path))
-                AVoxelMod.Popup("Timelapse recorded to: " + video_path);
+            if (File.Exists(video_path))
+            {
+                RecorderNotificationAction action = new RecorderNotificationAction();
+                action.SetPath(video_path);
+                AVoxelMod.Popup("Timelapse recorded to: " + video_path, action);
+            }
             else
+            {
                 AVoxelMod.Popup("Something went wrong, cant record the timelapse");
+            }
         }
 
         private byte[] GetImageBytes(Texture2D image)

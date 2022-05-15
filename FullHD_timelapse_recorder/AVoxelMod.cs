@@ -13,7 +13,7 @@ namespace TimelapseMod
 {
     public class AVoxelMod : Mod
     {
-        public const string ModeFolder = "timelapse_mod";
+        public const string ModeFolder = "timelapse_recorder_mod";
         public const string ModeName = "FullHD Timelapse Recorder";
         private const string c_template_button = "Camera";
         private const string c_panel_name = "Fill";

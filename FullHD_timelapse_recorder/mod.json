@@ -1,5 +1,10 @@
 ﻿{
-    "Title" : "Timelapse mod",
-    "Description" : "Prepare timelapse and record a video",
-    "Tags": [ "Utils" ]
+  "Dependencies": null,
+  "Description": "Create your own awesome FullHD timelapses! Windows OS only",
+  "Hidden": false,
+  "PublishedFileId": 2808400701,
+  "Tags": [
+    "Utils"
+  ],
+  "Title": "FullHD Timelapse Recorder"
 }
